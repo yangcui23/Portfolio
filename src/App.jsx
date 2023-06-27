@@ -16,12 +16,18 @@ function App() {
     const [errorMessage, setErrorMessage] = useState('');
     const [showForm, setShowForm] = useState(false);
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-    const handleScrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+
+
+        const handleScrollToSection = (sectionId) => {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+                setActiveSection(sectionId);
+            }
+        };
+
+
+
     const handleButtonClick = () => {
         setShowForm(true);
     };
@@ -69,6 +75,7 @@ function App() {
         }
     };
     useEffect(() => {
+
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -130,8 +137,6 @@ function App() {
 
 
 
-
-
     return (
     <div className="full">
         <Routes>
@@ -139,7 +144,7 @@ function App() {
 
         </Routes>
 
-        <Navbar handleClick={handleScrollToSection} handleButtonClick={handleButtonClick} />
+        <Navbar handleScrollToSection={handleScrollToSection} />
         <div className="timeline">
 
             <div id="section1" className="img" >
@@ -206,7 +211,7 @@ function App() {
 
                             <div className="projectText">
 
-                                <p className="cardText">TBD</p>
+                                <p className="cardText">ShopWise</p>
                                 <div className="textUnderline"></div>
                             </div>
 
@@ -246,7 +251,7 @@ function App() {
                     <div className="inside">
 
                     <h3 className="inter text-gray-500">· ·</h3>
-                    <p className="const ">const name = </p>
+                    <p className="const ">let name = </p>
                     <span >Yang Cui </span>
                     </div>
                 </div>
@@ -254,7 +259,7 @@ function App() {
                     <p className="num text-gray-100">02</p>
                     <div className="inside">
                         <h3 className="inter text-gray-500">· ·</h3>
-                    <p className="const ">const dateOfBirth =</p>
+                    <p className="const ">let dateOfBirth =</p>
                         <span >02/03/1998 </span>
                     </div>
                 </div>
@@ -262,7 +267,7 @@ function App() {
                     <p className="num text-gray-100">03</p>
                     <div className="inside">
                         <h3 className="inter text-gray-500">· ·</h3>
-                    <p className="const ">const email =</p>
+                    <p className="const ">let email =</p>
                     <span >yangcui283@yahoo.com</span>
 
 
@@ -271,42 +276,42 @@ function App() {
                 <div className="neons flex hover:bg-gray-400">
                     <p className="num text-gray-100">04</p>
                     <h3 className="inter text-gray-500">· ·</h3>
-                    <p className="const ">// </p>
+                    <p className="const text-gray-500">/* 这条线只是为了让代码更好看一些 :) */ </p>
                 </div>
                 <div className="neons flex hover:bg-gray-400">
                     <p className="num text-gray-100">05</p>
                     <h3 className="inter text-gray-500">· ·</h3>
-                    <p className="const ">function skills( ) {'{'} </p>
+                    <p className="const ">const skills = ( ) => {'{'}  </p>
                 </div>
                 <div className="neons flex hover:bg-gray-400">
                     <p className="num text-gray-100">06</p>
-                    <h3 className="inter text-gray-500">· ·</h3>
-                    <p className="const text-fuchsia-800"> return(  </p>
+                    <h3 className="inter text-gray-500">· · · · </h3>
+                    <p className="const text-fuchsia-800"> return <b className="text-white" >[</b>  </p>
                 </div>
                 <div className="neon flex hover:bg-gray-400">
                     <p className="num text-gray-100">07</p>
-                    <h3 className="inter text-gray-500">· ·</h3>
+                    <h3 className="inter text-gray-500">· · · · · · ·  </h3>
                     <p className="const ">{'{'} language : <span >Java , Javascript , Python , HTML5 , CSS </span> {'}'} ,</p>
                 </div>
                 <div className="neon flex hover:bg-gray-400">
                     <p className="num text-gray-100">08</p>
-                    <h3 className="inter text-gray-500">· ·</h3>
+                    <h3 className="inter text-gray-500">· · · · · · ·  </h3>
                     <p className="const ">{'{'} framework : <span > Vite , React , SpringBoot , Tailwind ,Bootstrap , Flask , Express </span> {'}'} ,</p>
                 </div>
                 <div className="neon flex hover:bg-gray-400">
                     <p className="num text-gray-100">09</p>
-                    <h3 className="inter text-gray-500">· ·</h3>
+                    <h3 className="inter text-gray-500">· · · · · · ·</h3>
                     <p className="const ">{'{'} databases : <span > MySQL ,MongoDB </span>{'}'} ,</p>
                 </div>
                 <div className="neon flex hover:bg-gray-400">
                     <p className="num text-gray-100">10</p>
-                    <h3 className="inter text-gray-500">· ·</h3>
+                    <h3 className="inter text-gray-500">· · · · · · ·</h3>
                     <p className="const ">{'{'} tools : <span > AWS ECS , Github , Node JS , VS Code , PostmanAPI , Spring Tool Suite , Intellij IDEA </span> {'}'}</p>
                 </div>
                 <div className="neons flex hover:bg-gray-400">
                     <p className="num text-gray-100">11</p>
-                    <h3 className="inter text-gray-500">· ·</h3>
-                    <p className="const text-fuchsia-800 ">)</p>
+                    <h3 className="inter text-gray-500">· · · · </h3>
+                    <p className="const text-white ">]</p>
                 </div>
                 <div className="neons flex hover:bg-gray-400">
                     <p className="num text-gray-100">12</p>
@@ -316,39 +321,60 @@ function App() {
                 <div className="neons flex hover:bg-gray-400">
                     <p className="num text-gray-100">13</p>
                     <h3 className="inter text-gray-500">· ·</h3>
-                    <p className="const "></p>
+                    <p className="const text-gray-500">/* 这条线只是为了让代码更好看一些 :) */ </p>
                 </div>
                 <div className="neons flex hover:bg-gray-400">
                     <p className="num text-gray-100">14</p>
                     <h3 className="inter text-gray-500">· ·</h3>
-                    <p className="const ">function workExperience( ) {'{'}</p>
+                    <p className="const ">const workExperience = ( ) => {'{'}</p>
                 </div>
                 <div className="neons flex hover:bg-gray-400">
                     <p className="num text-gray-100">15</p>
-                    <h3 className="inter text-gray-500">· ·</h3>
-                    <p className="const text-fuchsia-800 ">return(</p>
+                    <h3 className="inter text-gray-500">· · · ·</h3>
+                    <p className="const text-fuchsia-800 ">return <b className="text-white">[</b></p>
                 </div>
                 <div className="neon flex hover:bg-gray-400">
                     <p className="num text-gray-100">16</p>
-                    <h3 className="inter text-gray-500">· ·</h3>
+                    <h3 className="inter text-gray-500">· · · · · ·</h3>
                     <p className="const "> while ( <span > year {'<'} 2023 || year {'>'} 2021</span> ) {'{'} </p>
                 </div>
                 <div className="neon flex hover:bg-gray-400">
                     <p className="num text-gray-100">17</p>
-                    <h3 className="inter text-gray-500">· ·</h3>
-                    <p className="const "><span></span></p>
+                    <h3 className="inter text-gray-500">· · · · · · · · </h3>
+                    <p className="const "><b className="let"> let position = <span>restaurantOwner</span></b></p>
                 </div>
-                <div className="neons flex hover:bg-gray-400">
+                <div className="neon flex hover:bg-gray-400">
                     <p className="num text-gray-100">18</p>
-                    <h3 className="inter text-gray-500">· ·</h3>
-                    <p className="const "></p>
+                    <h3 className="inter text-gray-500">· · · · · · · · · ·</h3>
+                    <p className="const "><span>Schedule and direct staff in daily work assignments to maximize productivity.</span> </p>
+                </div>
+                <div className="neon flex hover:bg-gray-400">
+                    <p className="num text-gray-100">19</p>
+                    <h3 className="inter text-gray-500">· · · · · · · · · ·</h3>
+                    <p className="const "><span>Optimize profits by controlling food, beverage, and labor costs on a daily basis.</span></p>
+                </div>
+                <div className="neon flex hover:bg-gray-400">
+                    <p className="num text-gray-100">20</p>
+                    <h3 className="inter text-gray-500">· · · · · · · · · ·</h3>
+                    <p className="const "><span>Efficiently resolve problems or concerns to the satisfaction of all involved parties. <b className="flashing-text">|</b></span></p>
                 </div>
                 <div className="neons flex hover:bg-gray-400">
-                    <p className="num text-gray-100">19</p>
-                    <h3 className="inter text-gray-500">· ·</h3>
-                    <p className="const "></p>
+                    <p className="num text-gray-100">21</p>
+                    <h3 className="inter text-gray-500">· · · · · · </h3>
+                    <p className="const ">{'}'}</p>
                 </div>
-                <p className="rightClose text-neutral-400 text-3xl">{'}'}</p>
+                <div className="neons flex hover:bg-gray-400">
+                    <p className="num text-gray-100">22</p>
+                    <h3 className="inter text-gray-500">· · · ·  </h3>
+                    <p className="const text-white">]</p>
+                </div>
+                <div className="neons flex hover:bg-gray-400">
+                    <p className="num text-gray-100">23</p>
+                    <h3 className="inter text-gray-500">· ·  </h3>
+                    <p className="const "> {'}'}</p>
+                </div>
+
+                <p className="rightClose text-neutral-400 text-3xl"> {'}'} </p>
             </div>
             <div id="section4" className="contact">
                 <div className="logo">

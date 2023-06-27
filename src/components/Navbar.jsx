@@ -2,7 +2,7 @@ import React,{useRef,useState} from "react";
 import './nav.css';
 import {Link} from "react-router-dom";
 import {RxDropdownMenu} from "react-icons/rx"
-const Navbar=({handleClick}) => {
+const Navbar=({handleScrollToSection}) => {
     const [show, setShow] = useState(false);
     const dropMenu = useRef(null)
 
@@ -23,11 +23,11 @@ const Navbar=({handleClick}) => {
 
             </div>
             <div className="group items-center ">
-                <button className="cursor mr-12 text-xl hover:text-neutral-400" onClick={() => handleClick('section3')}>About = ( ) =></button>
+                <button className="cursor mr-12  " onClick={() => handleScrollToSection('section3')}>About = ( ) =></button>
 
-                <button className="cursor mr-12 text-xl hover:text-neutral-400" onClick={() => handleClick('section2')}>Projects = ( ) =></button>
+                <button className="cursor mr-12  " onClick={() => handleScrollToSection('section2')}>Projects = ( ) =></button>
 
-                <button className="cursor mr-12 text-xl hover:text-neutral-400" onClick={() => handleClick('section4')}>Contact Me = ( ) =></button>
+                <button className="cursor mr-12  " onClick={() => handleScrollToSection('section4')}>Contact Me = ( ) =></button>
 
 
             </div>

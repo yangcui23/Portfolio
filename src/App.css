@@ -310,6 +310,19 @@
     color: #70e000;
 
 }
+.let {
+    color: #ffdd00;
+}
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.flashing-text {
+    color: #f5ebe0;
+    animation: flash 1s infinite;
+}
 .dot4 {
     top: 66.1%; /* Adjust the position of the first dot */
 }
@@ -531,6 +544,10 @@
     border-radius: 10px;
 }
 @media only screen and (max-width: 390px) {
+    .full {
+        width: 100%;
+
+    }
     .img {
         width: 100%;
 

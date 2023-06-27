@@ -1,7 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Kaushan+Script&family=Lobster&family=Moirai+One&family=Orbit&family=Pacifico&family=Playfair+Display:wght@500&family=Tilt+Prism&family=VT323&family=Yatra+One&family=Yuji+Hentaigana+Akebono&display=swap');
 
-.cursor {
-    font-weight: bold;
-}
 .nav {
     background: linear-gradient(90deg, rgba(194,194,195,1) 13%, rgba(59,106,142,1) 49%, rgba(0,2,4,1) 94%);;
     width: 100%;
@@ -13,7 +11,18 @@
     justify-content: space-between;
     z-index: 9999;
 }
+.cursor {
+    font-family: 'Yatra One', cursive;
+    font-size: 25px;
+    transition: color 0.4s ease;
+}
+button.active {
+    background-color: yellow;
 
+}
+.cursor:hover {
+    color: #cac4ce;
+}
 
 .name {
     margin-left: 20px;
