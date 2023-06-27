@@ -14,6 +14,8 @@
 }
 .rightClose {
     font-family: 'Lobster', cursive;
+
+    margin-top: 50px;
     margin-left: 425px;
 }
 .social {
@@ -41,7 +43,7 @@
 .tweetly {
     margin-left: 200px;
     display: flex;
-    width: 500px;
+    width: 550px;
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
@@ -51,7 +53,7 @@
 
     margin-left: 200px;
     display: flex;
-    width: 500px;
+    width: 550px;
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
@@ -61,7 +63,7 @@
 
     margin-left: 200px;
     display: flex;
-    width: 500px;
+    width: 550px;
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
@@ -71,7 +73,17 @@
 
     margin-left: 200px;
     display: flex;
-    width: 500px;
+    width: 550px;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.coming3 {
+
+    margin-left: 200px;
+    display: flex;
+    width: 550px;
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
@@ -80,22 +92,27 @@
 .show {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(40%);
+    transform: translateX(45%);
 }
 .show2 {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(90%);
+    transform: translateX(85%);
 }
 .show3 {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(140%);
+    transform: translateX(125%);
 }
 .show4 {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(190%);
+    transform: translateX(165%);
+}
+.show5 {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(200%);
 }
 .projectText {
     position: absolute;
@@ -105,8 +122,8 @@
 }
 
 .projectImg {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 320px;
     flex: 1;
     border-radius: 10px;
 }
@@ -119,7 +136,7 @@
     color: wheat;
     font-weight: bold;
     font-size: xxx-large;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 .textUnderline {
     width: 100%;
@@ -236,9 +253,11 @@
     background-color: #42a5f5;
 }
 .message {
+    text-align: center;
     font-size: 40px;
     font-family: 'Gasoek One', sans-serif;
 }
+
 .formColor {
     width: 400px;
     padding: 20px;
@@ -259,7 +278,8 @@
 
 .projects {
     width: 100%;
-    
+    display: flex;
+    flex-direction: column;
     background-image: url("https://media.istockphoto.com/id/1287121458/photo/background-navy-blue-black-grunge-textured-abstract-stucco-concrete-dark-wall-minimalism.jpg?s=170667a&w=0&k=20&c=L7KovrWixmxzArrJZUPTKjy_tiQPMcF1ztgv-0LHqio=");
     background-size: cover;
     background-position: center;
@@ -355,13 +375,22 @@
 
 
 
+
+
+@media (min-width: 768px) {
+    .button-64 {
+        font-size: 24px;
+        min-width: 196px;
+    }
+}
+
                                                    .button-56 {
                                                        align-items: center;
-                                                       background-color: #fee6e3;
+                                                       background-color: white;
                                                        border: 2px solid #111;
                                                        border-radius: 8px;
                                                        box-sizing: border-box;
-                                                       color: #111;
+                                                       color: white;
                                                        cursor: pointer;
                                                        display: flex;
                                                        font-family: Inter,sans-serif;
@@ -380,7 +409,7 @@
                                                    }
 
 .button-56:after {
-    background-color: #111;
+    background-color: #5e60ce;
     border-radius: 8px;
     content: "";
     display: block;
@@ -586,7 +615,8 @@
     }
     .projects {
         width: 100%;
-
+        display: flex;
+        flex-direction: column;
         background-image: url("https://media.istockphoto.com/id/1287121458/photo/background-navy-blue-black-grunge-textured-abstract-stucco-concrete-dark-wall-minimalism.jpg?s=170667a&w=0&k=20&c=L7KovrWixmxzArrJZUPTKjy_tiQPMcF1ztgv-0LHqio=");
         background-size: cover;
         background-position: center;
