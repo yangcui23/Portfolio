@@ -1,16 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Lobster&family=Moirai+One&family=Orbit&family=Playfair+Display:wght@500&family=Tilt+Prism&family=Yuji+Hentaigana+Akebono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Gasoek+One&family=Kaushan+Script&family=Libre+Baskerville&family=Lobster&family=Moirai+One&family=Orbit&family=Pacifico&family=Playfair+Display:wght@500&family=Tilt+Prism&family=VT323&family=Yatra+One&family=Yuji+Hentaigana+Akebono&display=swap');
+
+
 .img {
     width: 100%;
 
-    background-image: url("https://static.vecteezy.com/system/resources/previews/000/518/459/original/vector-black-stage-curtain-wallpaper-and-studio-room-banner-background.jpg");
+
+    /*background-image: url("https://static.vecteezy.com/system/resources/previews/000/518/459/original/vector-black-stage-curtain-wallpaper-and-studio-room-banner-background.jpg");*/
     background-size: cover;
+    background-color: #000000;
     background-position: center;
 
 
 }
 .about {
     width: 100%;
-    background: linear-gradient(0deg, rgba(36,36,38,1) 0%, rgba(10,10,30,1) 3%);
+    background-color: #14213d;
+    /*background: linear-gradient(0deg, rgba(36,36,38,1) 0%, rgba(10,10,30,1) 3%);*/
 }
 .rightClose {
     font-family: 'Lobster', cursive;
@@ -145,8 +150,8 @@
 }
 .contact {
     width: 100%;
-
-    background: linear-gradient(0deg, rgba(30,30,38,1) 94%, rgba(36,36,38,1) 100%);
+    background-color: #495057;
+    /*background: linear-gradient(0deg, rgba(30,30,38,1) 94%, rgba(36,36,38,1) 100%);*/
 }
 .logo2 {
     display: grid;
@@ -280,8 +285,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-image: url("https://media.istockphoto.com/id/1287121458/photo/background-navy-blue-black-grunge-textured-abstract-stucco-concrete-dark-wall-minimalism.jpg?s=170667a&w=0&k=20&c=L7KovrWixmxzArrJZUPTKjy_tiQPMcF1ztgv-0LHqio=");
-    background-size: cover;
+    background-color: #090213;
+    /*background-image: url("./src/assets/darkBlue.jpg");*/
+    /*background-size: contain;*/
     background-position: center;
 }
 .pfp {
@@ -299,19 +305,27 @@
     margin-left: 20px;
 }
 .const {
+
+    font-family: 'Chakra Petch', sans-serif;
     text-align: left;
     color: #ffdd00;
     font-size: 20px;
     margin-left: 10px;
-    margin-right:28px;
+    margin-right: 28px;
 }
 .neons {
     display: block;
     justify-content: flex-start;
     text-align: center;
 }
-.neon {
 
+.neon {
+    align-items: center;
+    text-align: center;
+}
+
+.neons {
+    align-items: center;
     text-align: center;
 }
 
@@ -326,8 +340,9 @@
 .neon span {
     font-size: 20px;
     text-align: center;
-    font-weight: bold;
+
     color: #70e000;
+    font-family: 'Libre Baskerville', serif;
 
 }
 .let {
@@ -623,7 +638,8 @@
     }
     .about {
         width: 100%;
-        background: linear-gradient(0deg, rgba(36,36,38,1) 0%, rgba(10,10,30,1) 3%);
+
+        /*background: linear-gradient(0deg, rgba(36,36,38,1) 0%, rgba(10,10,30,1) 3%);*/
     }
 
     .pfp {

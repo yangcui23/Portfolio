@@ -15,17 +15,21 @@ function App() {
     const [message, setMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [showForm, setShowForm] = useState(false);
+    const [showLink, setShowLink] = useState(false);
+    const [showLink2, setShowLink2] = useState(false);
+    const [showLink3, setShowLink3] = useState(false);
+    const [showLink4, setShowLink4] = useState(false);
+    const [showLink5, setShowLink5] = useState(false);
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
 
-        const handleScrollToSection = (sectionId) => {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-                setActiveSection(sectionId);
-            }
-        };
+    const handleScrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({behavior: 'smooth'});
 
+        }
+    };
 
 
     const handleButtonClick = () => {
@@ -35,6 +39,42 @@ function App() {
     const handleCloseForm = () => {
         setShowForm(false);
     };
+
+    const handleLinkButton2 = () => {
+        setShowLink2(true);
+    }
+    const handleLinkClose2 = () => {
+        setShowLink2(false);
+
+    }
+    const handleLinkButton3 = () => {
+        setShowLink3(true);
+    }
+    const handleLinkClose3 = () => {
+        setShowLink3(false);
+
+    }
+    const handleLinkButton4 = () => {
+        setShowLink4(true);
+    }
+    const handleLinkClose4 = () => {
+        setShowLink4(false);
+
+    }
+    const handleLinkButton5 = () => {
+        setShowLink5(true);
+    }
+    const handleLinkClose5 = () => {
+        setShowLink5(false);
+
+    }
+    const handleLinkButton = () => {
+        setShowLink(true);
+    }
+    const handleLinkClose = () => {
+        setShowLink(false);
+
+    }
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -44,7 +84,7 @@ function App() {
             return;
         }
 
-        const messageData = { name, email, message };
+        const messageData = {name, email, message};
 
         try {
             const response = await fetch('http://localhost:3000/send-email', {
@@ -183,13 +223,22 @@ function App() {
 
                     <h3 className="pro text-3xl text-neutral-300">const Projects = ( ) => {'{'}</h3>
                 </div>
-            <button>
-                <div className="tweetly" >
+
+                {showLink && (
+                    <div className="tweetlyDetail">
+                        <div className="linkDetail">
+
+
+                        </div>
+
+                    </div>
+                )}
+                <div className="tweetly">
                     <div className="wrapper">
 
                         <div className="projectText">
 
-                            <p className="cardText">Tweetly</p>
+                            <button className="cardText" onClick={handleLinkButton}>Tweetly</button>
                             <div className="textUnderline"></div>
                         </div>
 
@@ -199,15 +248,23 @@ function App() {
 
 
                 </div>
-            </button>
-               <button>
 
-                <div className="centura mt-12" >
+                {showLink2 && (
+                    <div className="tweetlyDetail">
+                        <div className="linkDetail">
+
+
+                        </div>
+
+                    </div>
+                )}
+
+                <div className="centura mt-12">
                     <div className="wrapper">
 
                         <div className="projectText">
 
-                            <p className="cardText">Hospital Manager</p>
+                            <button className="cardText" onClick={handleLinkButton2}>Hospital Manager</button>
                             <div className="textUnderline"></div>
                         </div>
 
@@ -217,60 +274,85 @@ function App() {
 
 
                 </div>
-               </button>
-               <button>
-                    <div className="coming mt-12" >
-                        <div className="wrapper">
 
-                            <div className="projectText">
+                {showLink3 && (
+                    <div className="tweetlyDetail">
+                        <div className="linkDetail">
 
-                                <p className="cardText">ShopWise</p>
-                                <div className="textUnderline"></div>
-                            </div>
 
                         </div>
+
+                    </div>
+                )}
+                <div className="coming mt-12">
+                    <div className="wrapper">
+
+                        <div className="projectText">
+
+                            <button className="cardText" onClick={handleLinkButton3}>TBD</button>
+                            <div className="textUnderline"></div>
+                        </div>
+
+                    </div>
+
+                    <img className="projectImg" src="./src/assets/coming.jpg" alt="project website"/>
+
+
+                </div>
+
+                {showLink4 && (
+                    <div className="tweetlyDetail">
+                        <div className="linkDetail">
+
+
+                        </div>
+
+                    </div>
+                )}
+
+                <div className="coming2 mt-12">
+                    <div className="wrapper">
+
+                        <div className="projectText">
+
+                            <button className="cardText" onClick={handleLinkButton4}>TBD</button>
+                            <div className="textUnderline"></div>
+                        </div>
+
+                    </div>
+
+                    <img className="projectImg" src="./src/assets/coming.jpg" alt="project website"/>
+
+
+                </div>
+
+
+                {showLink5 && (
+                    <div className="tweetlyDetail">
+                        <div className="linkDetail">
+                            <button onClick={handleLinkClose} className="close-button"><MdOutlineClose></MdOutlineClose>
+                            </button>
+
+                        </div>
+
+                    </div>
+                )}
+                <div className="coming3 mt-12">
+                    <div className="wrapper">
+
+                        <div className="projectText">
+
+                            <button className="cardText" onClick={handleLinkButton5}>TBD</button>
+                            <div className="textUnderline"></div>
+                        </div>
+
+                    </div>
 
                         <img className="projectImg" src="./src/assets/coming.jpg" alt="project website"/>
 
 
                     </div>
-               </button>
-                <button>
 
-                    <div className="coming2 mt-12" >
-                        <div className="wrapper">
-
-                            <div className="projectText">
-
-                                <p className="cardText">TBD</p>
-                                <div className="textUnderline"></div>
-                            </div>
-
-                        </div>
-
-                        <img className="projectImg" src="./src/assets/coming.jpg" alt="project website"/>
-
-
-                    </div>
-                </button>
-                <button>
-
-                    <div className="coming3 mt-12" >
-                        <div className="wrapper">
-
-                            <div className="projectText">
-
-                                <p className="cardText">TBD</p>
-                                <div className="textUnderline"></div>
-                            </div>
-
-                        </div>
-
-                        <img className="projectImg" src="./src/assets/coming.jpg" alt="project website"/>
-
-
-                    </div>
-                </button>
                 <p className="rightClose text-neutral-400 text-3xl">{'}'}</p>
             </div>
             <div id="section3" className="about">
@@ -321,23 +403,26 @@ function App() {
                 </div>
                 <div className="neon flex hover:bg-gray-400">
                     <p className="num text-gray-100">07</p>
-                    <h3 className="inter text-gray-500">· · · · · · ·  </h3>
-                    <p className="const ">{'{'} language : <span >Java , Javascript , Python , HTML5 , CSS </span> {'}'} ,</p>
+                    <h3 className="inter text-gray-500">· · · · · · · </h3>
+                    <p className="const ">{'{'} language : <span>CSS, HTML5, Java, Javascript, Python </span> {'}'} ,
+                    </p>
                 </div>
                 <div className="neon flex hover:bg-gray-400">
                     <p className="num text-gray-100">08</p>
-                    <h3 className="inter text-gray-500">· · · · · · ·  </h3>
-                    <p className="const ">{'{'} framework : <span > Vite , React , SpringBoot , Tailwind ,Bootstrap , Flask , Express </span> {'}'} ,</p>
+                    <h3 className="inter text-gray-500">· · · · · · · </h3>
+                    <p className="const ">{'{'} framework : <span> Bootstrap, Express, Flask, React, SpringBoot, Tailwind, Vite </span> {'}'} ,
+                    </p>
                 </div>
                 <div className="neon flex hover:bg-gray-400">
                     <p className="num text-gray-100">09</p>
                     <h3 className="inter text-gray-500">· · · · · · ·</h3>
-                    <p className="const ">{'{'} databases : <span > MySQL ,MongoDB </span>{'}'} ,</p>
+                    <p className="const ">{'{'} databases : <span> MongoDB, MySQL </span>{'}'} ,</p>
                 </div>
                 <div className="neon flex hover:bg-gray-400">
                     <p className="num text-gray-100">10</p>
                     <h3 className="inter text-gray-500">· · · · · · ·</h3>
-                    <p className="const ">{'{'} tools : <span > AWS ECS , Github , Node JS , VS Code , PostmanAPI , Spring Tool Suite , Intellij IDEA </span> {'}'}</p>
+                    <p className="const ">{'{'} tools : <span> AWS ECS, Github, Intellij IDEA, Node JS, PostmanAPI, Spring Tool Suite, VS Code </span> {'}'}
+                    </p>
                 </div>
                 <div className="neons flex hover:bg-gray-400">
                     <p className="num text-gray-100">11</p>
@@ -522,7 +607,35 @@ margin-top : 20px;
   background: var(--color);
   color: #fff;
 }
-                 
+                 .tweetlyDetail {
+                 position:fixed;
+                 top: 0;
+            left: 0;
+                 width:100%;
+                 height : 100%;
+                 background-color : black;
+                 display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            }
+            .linkDetail {
+            display:block;
+          justify-content:center;
+          align-items:center;
+          margin-top : 200px;
+          margin-left : 600px;
+          border-radius:10px;
+            height:400px;
+            width:700px;
+            background-color: #d9d9d9;
+            padding: 30px;
+            transition: all 0.3s ease-out; 
+            align-items: center;
+            justify-content: center;
+            text-align:center;
+            }
+            
             .form {
             
             position: fixed;
